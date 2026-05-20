@@ -15,6 +15,11 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll down and center" })
 vim.keymap.set("n", "n", "'Nn'[v:searchforward].'zvzz'", { expr = true, desc = "Next search result (centered)" })
 vim.keymap.set("n", "N", "'nN'[v:searchforward].'zvzz'", { expr = true, desc = "Prev search result (centered)" })
 
+-- Override <leader><leader> (LazyVim default: find files) to find buffers instead
+vim.keymap.set("n", "<leader><leader>", function()
+  Snacks.picker.buffers()
+end, { desc = "Show open buffers" })
+
 -- Paste over selection without overwriting the clipboard.
 -- "_d deletes into the black hole register, P pastes before cursor.
 vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Paste without overwriting clipboard" })

@@ -12,7 +12,7 @@ vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 vim.opt.wrap = false
 
--- Indentation (LazyVim defaults to 2 already, made explicit here)
+-- Indentation
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
